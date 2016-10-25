@@ -35,7 +35,7 @@ public class JerseyConfig extends ResourceConfig{
         config.setConfigId("springboot-jersey-swagger-docker-example");
         config.setTitle("Spring Boot + Jersey + Swagger + Docker Example");
         config.setVersion("v1");
-        config.setContact("Orlando L Otero");
+        config.setContact("Gopesh Desai");
         config.setSchemes(new String[] { "http", "https" });
         config.setBasePath(this.apiPath);
         config.setResourcePackage("com.gopeshdesai.springboot.controller");

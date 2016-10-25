@@ -21,7 +21,7 @@ public class SwaggerConfiguration {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build()
-                .pathMapping("/api");
+                .build();
+        //.pathMapping("/api");
     }
 }
