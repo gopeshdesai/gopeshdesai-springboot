@@ -33,6 +33,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jersey</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
@@ -82,14 +90,8 @@
                 <groupId>com.spotify</groupId>
                        <artifactId>docker-maven-plugin</artifactId>
                        <version>${docker-maven-plugin-spotify.version}</version>
-                       <!-- Include: export DOCKER_HOST=tcp://docker:4243 in host executing mvn docker:build -->
-                       <configuration>
-                         <!-- One or the other -->
-                         <!-- First add server entry in settings.xml -->
-                         <serverId>docker-hub</serverId>
-                         <!-- Uses ~/.docker/config.json created once logged in using "docker login" command -->
-                         <!-- <useConfigFile>true</useConfigFile> -->
-
+                <configuration>
+                    <serverId>docker-hub</serverId>
                          <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                          <pushImage>${push.image}</pushImage>
                          <forceTags>true</forceTags>

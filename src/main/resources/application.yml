@@ -1,6 +1,7 @@
 server.servlet-path: /
 
 spring.jersey.application-path: /api
+spring.data.mongodb.uri: mongodb://localhost:27017/dev3
 
 endpoints:
   enabled: false
@@ -10,4 +11,3 @@ endpoints:
     enabled: true
   metrics:
     enabled: true
-
